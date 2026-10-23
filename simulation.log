@@ -1,0 +1,67 @@
+VCD info: dumpfile async_fifo.vcd opened for output.
+============================================================
+       STARTING ASYNCHRONOUS FIFO VERIFICATION TEST         
+   Write Clock: 100 MHz  |  Read Clock: 40 MHz              
+============================================================
+
+--- TEST 1: Checking Reset State ---
+[PASS] Reset state confirmed: FIFO is EMPTY and NOT FULL.
+
+--- TEST 2: Burst Writing 16 items to fill FIFO ---
+[PASS  @ 265000 ns] FIFO FULL correctly asserted!
+
+--- TEST 3: Testing Overflow Protection ---
+[INFO] Overflow write attempt completed without breaking FIFO.
+
+--- TEST 4: Burst Reading all 16 items from FIFO ---
+[PASS  @ 289000 ns] Read Match: 0xa0
+[PASS  @ 339000 ns] Read Match: 0xa1
+[PASS  @ 389000 ns] Read Match: 0xa2
+[PASS  @ 439000 ns] Read Match: 0xa3
+[PASS  @ 489000 ns] Read Match: 0xa4
+[PASS  @ 539000 ns] Read Match: 0xa5
+[PASS  @ 589000 ns] Read Match: 0xa6
+[PASS  @ 639000 ns] Read Match: 0xa7
+[PASS  @ 689000 ns] Read Match: 0xa8
+[PASS  @ 739000 ns] Read Match: 0xa9
+[PASS  @ 789000 ns] Read Match: 0xaa
+[PASS  @ 839000 ns] Read Match: 0xab
+[PASS  @ 889000 ns] Read Match: 0xac
+[PASS  @ 939000 ns] Read Match: 0xad
+[PASS  @ 989000 ns] Read Match: 0xae
+[PASS  @ 1039000 ns] Read Match: 0xaf
+[PASS  @ 1163000 ns] FIFO EMPTY correctly asserted after read!
+
+--- TEST 5: Testing Underflow Protection ---
+[WARN @ 1188000 ns] Attempted to read from EMPTY FIFO!
+
+--- TEST 6: Concurrent Random Push & Pop Test ---
+[WARN @ 1213000 ns] Attempted to read from EMPTY FIFO!
+[WARN @ 1263000 ns] Attempted to read from EMPTY FIFO!
+[PASS  @ 1314000 ns] Read Match: 0x10
+[PASS  @ 1389000 ns] Read Match: 0x11
+[PASS  @ 1464000 ns] Read Match: 0x12
+[PASS  @ 1539000 ns] Read Match: 0x13
+[PASS  @ 1614000 ns] Read Match: 0x14
+[PASS  @ 1689000 ns] Read Match: 0x15
+[PASS  @ 1764000 ns] Read Match: 0x16
+[PASS  @ 1839000 ns] Read Match: 0x17
+[PASS  @ 1889000 ns] Read Match: 0x18
+[PASS  @ 1939000 ns] Read Match: 0x19
+[PASS  @ 1989000 ns] Read Match: 0x1a
+[PASS  @ 2039000 ns] Read Match: 0x1b
+[PASS  @ 2089000 ns] Read Match: 0x1c
+[PASS  @ 2139000 ns] Read Match: 0x1d
+[PASS  @ 2189000 ns] Read Match: 0x1e
+[PASS  @ 2239000 ns] Read Match: 0x1f
+[PASS  @ 2289000 ns] Read Match: 0x20
+[PASS  @ 2339000 ns] Read Match: 0x21
+[PASS  @ 2389000 ns] Read Match: 0x22
+[PASS  @ 2439000 ns] Read Match: 0x23
+
+============================================================
+   *** ALL ASYNC FIFO TESTS PASSED WITH ZERO ERRORS! ***    
+   Waveform generated: async_fifo.vcd                       
+============================================================
+
+tb_async_fifo.v:247: $finish called at 2687500 (1ps)

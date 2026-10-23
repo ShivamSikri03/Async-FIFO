@@ -1,0 +1,46 @@
+[*]
+[*] GTKWave Analyzer Save File - Asynchronous FIFO
+[*]
+[dumpfile] "async_fifo.vcd"
+[savefile] "wave.gtkw"
+[timestart] 0
+[size] 1600 900
+[pos] -1 -1
+*-22.000000 300000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_async_fifo.
+[treeopen] tb_async_fifo.dut.
+@200
+-=== WRITE DOMAIN (100 MHz) ===
+@28
+tb_async_fifo.wclk
+tb_async_fifo.wrst_n
+tb_async_fifo.winc
+@22
+tb_async_fifo.wdata[7:0]
+@28
+tb_async_fifo.wfull
+@22
+tb_async_fifo.dut.u_wptr_full.wbin[4:0]
+tb_async_fifo.dut.u_wptr_full.wptr[4:0]
+@200
+-
+-=== READ DOMAIN (40 MHz) ===
+@28
+tb_async_fifo.rclk
+tb_async_fifo.rrst_n
+tb_async_fifo.rinc
+@22
+tb_async_fifo.rdata[7:0]
+@28
+tb_async_fifo.rempty
+@22
+tb_async_fifo.dut.u_rptr_empty.rbin[4:0]
+tb_async_fifo.dut.u_rptr_empty.rptr[4:0]
+@200
+-
+-=== CDC SYNCHRONIZED POINTERS ===
+@22
+tb_async_fifo.dut.wq2_rptr[4:0]
+tb_async_fifo.dut.rq2_wptr[4:0]
+[pattern_trace] 1
+[pattern_trace] 0

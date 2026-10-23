@@ -1,0 +1,17 @@
+# Simulation Artifacts
+*.vvp
+*.vcd
+*.log
+*.wlf
+transcript
+work/
+
+# EDA & Vivado Artifacts
+*.jou
+*.str
+.Xil/
+*.dcp
+*.rpt
+*.bit
+*.bin
+!simulation.log
