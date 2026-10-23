@@ -1,13 +1,7 @@
 `timescale 1ns / 1ps
 
-// ==============================================================================
-// Module: tb_async_fifo
-// Description: Self-Checking Testbench for Dual-Clock Asynchronous FIFO
 // Clock 1: wclk = 100 MHz (Period = 10ns)
 // Clock 2: rclk = 40 MHz  (Period = 25ns)
-// Author: Shivam Sikri
-// ==============================================================================
-
 module tb_async_fifo;
 
     // Parameters
